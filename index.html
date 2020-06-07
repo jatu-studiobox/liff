@@ -69,6 +69,16 @@
         }
 
         async function sendMsg() {
+            if (liff.getContext().type !== "none") {    // Check before call send message
+                await liff.sendMessages([   // use 'await' because liff.sendMessages is Promise
+                    {
+                        "type": "sticker",
+                        "stickerId": 1,
+                        "packageId": 1
+                    }
+                ])
+                alert("Message sent")
+            }
         }
 
         function getContext() {
