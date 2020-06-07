@@ -81,6 +81,12 @@
             document.getElementById("statusMessage").append(profile.statusMessage)
             document.getElementById("displayName").append(profile.displayName)
             document.getElementById("getDecodedIDToken").append(liff.getDecodedIDToken().email)  // get mail
+            liff.getProfile().then(profile => {
+                const email = liff.getDecodedIDToken().email;
+            }).catch(
+                //err => console.error(err)
+                err => alert(err)
+            );
         }
 
         function getEnvironment() {
