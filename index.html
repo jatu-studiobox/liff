@@ -131,11 +131,13 @@
             //alert("LINE Developers x Skooldio")
             await liff.init({ liffId: "1654311760-KokJyjaA" })
             document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-            if (liff.isLoggedIn()) {    // check is Logged in
+            if (liff.isLoggedIn()) {    // check is Logged In
                 getEnvironment()
                 getUserProfile()
                 getContext()
                 getFriendship()
+            } else {
+                liff.login()
             }
             // createUniversalLink()
         }
