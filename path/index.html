@@ -32,10 +32,9 @@
             document.getElementById("displayName").append(profile.displayName)
             document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)  // get mail
         }
-        
+
         async function main() {
             await liff.init({ liffId: "1654311760-KokJyjaA" })
-            document.getElementById("isLoggedIn").append(liff.isLoggedIn())
             if (liff.isLoggedIn()) {    // check is Logged In
                 getUserProfile()
             } else {
