@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=0,viewport-fit=cover">
     <title>Path</title>
     <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-    <h1>Hello World! Haha</h1>
+    <h1>Hello World!</h1>
     <p id="param"><b>Query Param: </b></p>
     <img id="pictureUrl">
     <p id="userId"><b>userId:</b> </p>
@@ -22,7 +22,7 @@
         document.getElementById("param").append(params.get("param"));
     </script>
 
-    <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
         async function getUserProfile() {
             const profile = await liff.getProfile()     // getProfile is Promise, so use await for wait result
